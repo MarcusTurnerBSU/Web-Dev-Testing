@@ -1,0 +1,62 @@
+h1 {
+    max-width: 25%;   
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0; /* Adjust as needed */
+    animation: 
+        typing 3s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+.fadein img {
+    position:absolute;
+    left:-65px;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    background-color: lightblue;
+}
+#f2 {
+    -webkit-animation-delay: -4s;
+    background-color: yellow;
+}
+
+#mybutton {
+  display: none;
+  color: #ffffff;
+  background-color: #ff0000;
+  width: 8em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
